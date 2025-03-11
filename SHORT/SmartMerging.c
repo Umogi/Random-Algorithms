@@ -12,7 +12,7 @@ void bubbleSort(int arr[], int start, int end) {
         swapped = 0;
         for (int i = start; i < end - 1; i++) {
             if (arr[i] > arr[i + 1]) {
-                Switcher(arr[i], arr[i + 1]);
+                Switcher(&arr[i], &arr[i + 1]);
                 swapped = 1;
             }
         }
