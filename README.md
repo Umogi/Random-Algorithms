@@ -7,6 +7,7 @@ This repository contains a collection of random algorithms implemented in C. The
 - `SHORT/` - Contains various sorting algorithms implemented in C.
   - `SoapWaterSort.c` - A unique sorting algorithm.
   - `DownBubleShort.c` - A variation of the bubble sort algorithm.
+  - `SmartMerging.c` - A combination of the merging and bubble sort algorithm.
 
 More algorithms will be added in the future!
 
