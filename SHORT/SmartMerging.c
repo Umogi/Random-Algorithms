@@ -1,14 +1,18 @@
 #include <stdio.h>
 
-void bubbleSortSection(int arr[], int start, int end) {
+void Switcher(int *x, int *y) {    
+    int temp = *x;  
+    *x = *y;  
+    *y = temp;  
+}
+
+void bubbleSort(int arr[], int start, int end) {
     int swapped;
     do {
         swapped = 0;
         for (int i = start; i < end - 1; i++) {
             if (arr[i] > arr[i + 1]) {
-                int temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = temp;
+                Switcher(arr[i], arr[i + 1]);
                 swapped = 1;
             }
         }
@@ -19,10 +23,10 @@ void SmartMerging(int arr[], int n) {
     for (int size = 2; size < n; size *= 2) {  // 2, 4, 8...
         for (int i = 0; i < n; i += size) {
             int end = (i + size < n) ? (i + size) : n;
-            bubbleSortSection(arr, i, end);
+            bubbleSort(arr, i, end);
         }
     }
-    bubbleSortSection(arr, 0, n);
+    bubbleSort(arr, 0, n);
 }
 
 int main() {
