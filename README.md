@@ -8,6 +8,10 @@ This repository contains a collection of random algorithms implemented in C. The
   - `SoapWaterSort.c` - A unique sorting algorithm.
   - `DownBubleShort.c` - A variation of the bubble sort algorithm.
   - `SmartMerging.c` - A combination of the merging and bubble sort algorithm.
+- `VISUAL/` - Contains a visual implementation of sorting algorithms using HTML, CSS, and JavaScript.
+  - `index.html` - The main file for displaying the sorting visualizer.
+  - `style.css` - Contains styling for the visualizer.
+  - `script.js` - JavaScript logic for animating the sorting process.
 
 More algorithms will be added in the future!
 
@@ -22,8 +26,11 @@ More algorithms will be added in the future!
    gcc SHORT/SoapWaterSort.c -o SoapWaterSort
    ./SoapWaterSort
    ```
-
    Replace `SoapWaterSort.c` with the desired algorithm file.
+
+3. To use the sorting visualizer:
+   - Open `SortingVisualizer/index.html` in a web browser.
+   - Click the "Start Sorting" button to see sorting animations.
 
 ## Contributions
 
@@ -36,4 +43,5 @@ This project is open-source. You are free to use and modify the code as needed.
 ---
 
 Stay tuned for more random algorithms!
+
 
