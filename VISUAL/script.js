@@ -79,7 +79,7 @@ async function merge(l, m, r, startTime) {
         drawArray(i, j); // Visualize before each comparison
         playSound(array[k]); // Play sound based on bar height
         cuntTimer(startTime); // Update timer
-        await sleep(1000); // Pause for animation
+        await sleep(10); // Pause for animation
 
         if (L[i] <= R[j]) {
             array[k++] = L[i++];
@@ -99,7 +99,7 @@ async function merge(l, m, r, startTime) {
     drawArray(i, j); // Visualize after the merge
     playSound(array[k - 1]); // Play sound based on the final element merged
     cuntTimer(startTime); // Update timer
-    await sleep(1000); // Pause for animation
+    await sleep(10); // Pause for animation
 }
 
 // Merge Sort function
@@ -109,7 +109,7 @@ async function mergeSort(l, r, startTime) {
         drawArray(l, r); // Highlight elements being compared
         playSound(array[l]); // Play sound based on height
         cuntTimer(startTime); // Update timer
-        await sleep(1000); // Pause for animation
+        await sleep(10); // Pause for animation
 
         const m = Math.floor(l + (r - l) / 2); // Calculate the mid point
         await mergeSort(l, m, startTime); // Recursively sort the left half
@@ -150,55 +150,3 @@ function startSorting() {
 // Generate random array on page load
 timerElement.innerText = "Time: 0.000 s";
 generateArray();
-
-
-/* Bubble Sort
-    for (let i = 0; i < array.length - 1; i++) {
-        for (let j = 0; j < array.length - i - 1; j++) {
-            drawArray(j, j + 1); // Highlight elements being compared
-            playSound(array[j]); // Play sound based on height
-            await sleep(10); // Pause for animation
-
-            if (array[j] > array[j + 1]) {
-                // Swap elements
-                [array[j], array[j + 1]] = [array[j + 1], array[j]];
-                drawArray(j, j + 1);
-                playSound(array[j]); // Play sound based on height
-            }
-
-            cuntTimer(startTime); // Update timer            
-        }
-    }
-*/
-
-/* Mine Selection Sort
-    for (let i = 0; i < Math.floor(array.length / 2); i++) {
-        let minP = i, maxP = i;
-
-        for (let j = i; j < array.length - i; j++) {
-            drawArray(j, j - 1);
-            
-            if (array[j] < array[minP]) minP = j;
-            if (array[j] > array[maxP]) maxP = j;
-
-            cuntTimer(startTime);
-            
-            await sleep(10);
-        }
-
-        [array[i], array[minP]] = [array[minP], array[i]];
-
-        if (maxP === i) maxP = minP;
-
-        [array[array.length - i - 1], array[maxP]] = [array[maxP], array[array.length - i - 1]];
-        
-        cuntTimer(startTime);
-
-        await sleep(10);
-
-        // Draw array after the swap and highlight the elements being compared
-        drawArray(minP, maxP);
-        playSound(array[minP]); // Play sound for the min element
-        playSound(array[maxP]); // Play sound for the max element
-    }
-*/
